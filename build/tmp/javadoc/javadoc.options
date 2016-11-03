@@ -1,6 +1,0 @@
--classpath '/home/arrocke/Repos/Sibley-Robotics/test/build/classes/main:/home/arrocke/Repos/Sibley-Robotics/test/build/resources/main:/home/arrocke/.gradle/caches/modules-2/files-2.1/edu.wpi.first.wpilib.networktables.java/NetworkTables/3.1.1-beta-1/e6bd8232cce0aaab31e4b2a738133c4363471260/NetworkTables-3.1.1-beta-1-desktop.jar:/home/arrocke/.gradle/caches/modules-2/files-2.1/edu.wpi.first.wpilib.networktables.java/NetworkTables/3.1.1-beta-1/c7ce3d9d33d75c108d9f0d3c4d82739c673ac3c2/NetworkTables-3.1.1-beta-1-arm.jar:/home/arrocke/.gradle/caches/modules-2/files-2.1/edu.wpi.first.wpilibj/wpilibJavaFinal/2016.5.1/340606a96e9914b9bcecec43406cbc8f58e1a14f/wpilibJavaFinal-2016.5.1.jar'
--d '/home/arrocke/Repos/Sibley-Robotics/test/build/docs/javadoc'
--doctitle 'test API'
--quiet 
--windowtitle 'test API'
-'/home/arrocke/Repos/Sibley-Robotics/test/src/main/java/org/usfirst/frc/team3100/Robot.java'

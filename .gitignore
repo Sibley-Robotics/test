@@ -13,3 +13,7 @@ hs_err_pid*
 
 .metadata/
 .recommenders/
+
+# build directories
+.gradle/
+build/
