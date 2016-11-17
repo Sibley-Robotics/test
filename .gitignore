@@ -15,7 +15,6 @@ hs_err_pid*
 .recommenders/
 
 # build directories
-.gradle/
 build/
 
 # intellij files
