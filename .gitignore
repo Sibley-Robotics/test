@@ -5,6 +5,7 @@
 
 # Package Files #
 *.jar
+!gradle/wrapper/gradle-wrapper.jar
 *.war
 *.ear
 
@@ -15,8 +16,10 @@ hs_err_pid*
 .recommenders/
 
 # build directories
+.gradle/
 build/
 
 # intellij files
 *.iws
 .idea/workspace.xml
+
