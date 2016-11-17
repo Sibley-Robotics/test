@@ -17,4 +17,7 @@ hs_err_pid*
 # build directories
 .gradle/
 build/
+
+# intellij files
 *.iws
+.idea/workspace.xml
