@@ -6,11 +6,11 @@ import org.usfirst.frc.team3100.Robot;
 public class Shoot extends Command{
     public Shoot() {
         super("Shoot");
-        requires(Robot.turret);
+        requires(Robot.shooter);
     }
 
     public void initialize() {
-        Robot.turret.shoot();
+        Robot.shooter.shoot();
     }
 
     public void execute() {
@@ -22,7 +22,7 @@ public class Shoot extends Command{
     }
 
     public void end() {
-        Robot.turret.stopShooting();
+        Robot.shooter.stopShooting();
     }
 
     public void interrupted() {

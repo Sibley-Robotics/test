@@ -10,15 +10,18 @@ public class Robot extends IterativeRobot {
 
     public static MainDrive drive;
     public static Turret turret;
+    public static Shooter shooter;
     public static OI oi;
 
     public void robotInit() {
         drive = new MainDrive();
         turret = new Turret();
+        shooter = new Shooter();
         oi = new OI();
 
         SmartDashboard.putData("Main Drive", drive);
         SmartDashboard.putData("Turret", turret);
+        SmartDashboard.putData("Shooter", shooter);
     }
 
     public void autonomousInit() {

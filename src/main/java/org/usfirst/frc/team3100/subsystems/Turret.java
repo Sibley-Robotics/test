@@ -11,7 +11,6 @@ public class Turret extends Subsystem {
 
     private SpeedController turntableMotor = RobotMap.turntableMotor;
     private SpeedController hoodMotor = RobotMap.hoodMotor;
-    private SpeedController shooterMotor = RobotMap.shooterMotor;
 
     public void initDefaultCommand() {
         setDefaultCommand(new Aim());
@@ -33,19 +32,11 @@ public class Turret extends Subsystem {
         hoodMotor.set(-1);
     }
 
-    public void shoot() {
-        shooterMotor.set(1);
-    }
-
     public void stopRotating() {
         turntableMotor.set(0);
     }
 
     public void stopLifting() {
         hoodMotor.set(0);
-    }
-
-    public void stopShooting () {
-        shooterMotor.set(0);
     }
 }
