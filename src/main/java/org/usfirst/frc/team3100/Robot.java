@@ -1,44 +1,33 @@
 package org.usfirst.frc.team3100;
 
+import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
+import org.usfirst.frc.team3100.subsystems.*;
+
 import edu.wpi.first.wpilibj.IterativeRobot;
-import edu.wpi.first.wpilibj.IterativeRobot;
-import edu.wpi.first.wpilibj.SpeedController;
-import edu.wpi.first.wpilibj.Victor;
-import edu.wpi.first.wpilibj.RobotDrive;
+import edu.wpi.first.wpilibj.command.Scheduler;
 
 public class Robot extends IterativeRobot {
-    private static final int controllerPort = 1;
-    private static final int leftDriveChannel = 5;
-    private static final int rightDriveChannel = 6;
 
-    private XBoxController controller;
-
-    private SpeedController rightDrive;
-    private SpeedController leftDrive;
-
-    private RobotDrive driveTrain;
+    public static MainDrive drive;
+    public static OI oi;
 
     public void robotInit() {
-        controller = new XBoxController(controllerPort);
-        rightDrive = new Victor(rightDriveChannel);
-        leftDrive = new Victor(leftDriveChannel);
+        drive = new MainDrive();
+        oi = new OI();
 
-        driveTrain = new RobotDrive(leftDrive, rightDrive);
+        SmartDashboard.putData("Main Drive", drive);
     }
 
     public void autonomousInit() {
-
     }
 
     public void autonomousPeriodic() {
-
     }
 
     public void teleopPeriodic() {
-        driveTrain.arcadeDrive(controller.getLeftStickY(), controller.getRightStickY());
+        Scheduler.getInstance().run();
     }
 
     public void testPeriodic() {
-
     }
 }

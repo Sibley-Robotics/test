@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="JavaScriptLibraryMappings">
+    <file url="PROJECT" libraries="{backbone-DefinitelyTyped, express-DefinitelyTyped, handlebars-DefinitelyTyped, jquery-DefinitelyTyped, mongodb-DefinitelyTyped, mongoose-DefinitelyTyped, node-DefinitelyTyped, npm-DefinitelyTyped, pug-DefinitelyTyped, requirejs-DefinitelyTyped, underscore-DefinitelyTyped, vue-DefinitelyTyped}" />
+  </component>
+</project>
