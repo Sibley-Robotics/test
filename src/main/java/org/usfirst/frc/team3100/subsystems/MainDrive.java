@@ -19,7 +19,6 @@ public class MainDrive extends Subsystem {
     }
 
     public void drive(double move, double rotate) {
-        SmartDashboard.putString("Drive", move + ", " + rotate);
         mainDrive.arcadeDrive(move, rotate);
     }
 }
