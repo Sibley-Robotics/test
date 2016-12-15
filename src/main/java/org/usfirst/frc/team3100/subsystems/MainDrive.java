@@ -10,9 +10,9 @@ import org.usfirst.frc.team3100.commands.Drive;
 
 public class MainDrive extends Subsystem {
 
-    SpeedController leftMotor = RobotMap.leftMotor;
-    SpeedController rightMotor = RobotMap.rightMotor;
-    RobotDrive mainDrive = new RobotDrive(leftMotor, rightMotor);
+    private SpeedController leftMotor = RobotMap.leftMotor;
+    private SpeedController rightMotor = RobotMap.rightMotor;
+    private RobotDrive mainDrive = new RobotDrive(leftMotor, rightMotor);
 
     public void initDefaultCommand() {
         setDefaultCommand(new Drive());
