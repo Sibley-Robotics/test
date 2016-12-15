@@ -5,7 +5,7 @@ import edu.wpi.first.wpilibj.*;
 
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import org.usfirst.frc.team3100.RobotMap;
-import org.usfirst.frc.team3100.commands.Drive;
+import org.usfirst.frc.team3100.commands.Aim;
 
 public class Turret extends Subsystem {
 
@@ -14,22 +14,22 @@ public class Turret extends Subsystem {
     private SpeedController shooterMotor = RobotMap.shooterMotor;
 
     public void initDefaultCommand() {
-
+        setDefaultCommand(new Aim());
     }
 
-    public void aimRight() {
+    public void rotateRight() {
         turntableMotor.set(1);
     }
 
-    public void aimLeft() {
+    public void rotateLeft() {
         turntableMotor.set(-1);
     }
 
-    public void aimUp() {
+    public void liftUp() {
         hoodMotor.set(1);
     }
 
-    public void aimDown() {
+    public void liftDown() {
         hoodMotor.set(-1);
     }
 
@@ -37,9 +37,15 @@ public class Turret extends Subsystem {
         shooterMotor.set(1);
     }
 
-    public void stop () {
-        hoodMotor.set(0);
+    public void stopRotating() {
         turntableMotor.set(0);
+    }
+
+    public void stopLifting() {
+        hoodMotor.set(0);
+    }
+
+    public void stopShooting () {
         shooterMotor.set(0);
     }
 }

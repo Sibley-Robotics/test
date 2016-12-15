@@ -9,13 +9,16 @@ import edu.wpi.first.wpilibj.command.Scheduler;
 public class Robot extends IterativeRobot {
 
     public static MainDrive drive;
+    public static Turret turret;
     public static OI oi;
 
     public void robotInit() {
         drive = new MainDrive();
+        turret = new Turret();
         oi = new OI();
 
         SmartDashboard.putData("Main Drive", drive);
+        SmartDashboard.putData("Turret", turret);
     }
 
     public void autonomousInit() {

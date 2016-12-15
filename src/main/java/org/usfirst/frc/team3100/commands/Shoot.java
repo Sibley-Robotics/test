@@ -3,31 +3,29 @@ package org.usfirst.frc.team3100.commands;
 import edu.wpi.first.wpilibj.command.Command;
 import org.usfirst.frc.team3100.Robot;
 
-public class Drive extends Command{
-
-    public Drive() {
-        super("Drive");
-        requires(Robot.drive);
+public class Shoot extends Command{
+    public Shoot() {
+        super("Shoot");
+        requires(Robot.turret);
     }
 
     public void initialize() {
-
+        Robot.turret.shoot();
     }
 
     public void execute() {
-        Robot.drive.drive(Robot.oi.getDriveMoveSpeed(), Robot.oi.getRotateSpeed());
+
     }
 
     public boolean isFinished() {
-        return false;
+        return Robot.oi.shooting();
     }
 
-    public void end () {
-
+    public void end() {
+        Robot.turret.stopShooting();
     }
 
     public void interrupted() {
-
+        end();
     }
-
 }
