@@ -7,6 +7,7 @@ public class Shoot extends Command{
     public Shoot() {
         super("Shoot");
         requires(Robot.shooter);
+        setTimeout(2);
     }
 
     public void initialize() {
@@ -18,7 +19,7 @@ public class Shoot extends Command{
     }
 
     public boolean isFinished() {
-        return Robot.oi.shooting();
+        return isTimedOut();
     }
 
     public void end() {

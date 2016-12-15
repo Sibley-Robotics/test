@@ -44,12 +44,4 @@ public class OI {
         else
             return 0;
     }
-
-    public boolean shooting() {
-        return controller.getLeftBumper();
-    }
-
-    public boolean pickingUp() {
-        return controller.getRightBumper();
-    }
 }

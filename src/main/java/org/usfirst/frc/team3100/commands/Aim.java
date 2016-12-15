@@ -18,15 +18,15 @@ public class Aim extends Command {
         int lift = Robot.oi.getTurretLiftDirection();
 
         if (rotate == 1)
-            Robot.turret.rotateLeft();
-        else if (rotate == -1)
             Robot.turret.rotateRight();
+        else if (rotate == -1)
+            Robot.turret.rotateLeft();
         else
             Robot.turret.stopRotating();
 
         if (lift == 1)
             Robot.turret.liftUp();
-        else if (rotate == -1)
+        else if (lift == -1)
             Robot.turret.liftDown();
         else
             Robot.turret.stopLifting();
@@ -37,11 +37,10 @@ public class Aim extends Command {
     }
 
     public void end() {
-        Robot.turret.stopRotating();
-        Robot.turret.stopLifting();
     }
 
     public void interrupted() {
-        end();
+        Robot.turret.stopRotating();
+        Robot.turret.stopLifting();
     }
 }

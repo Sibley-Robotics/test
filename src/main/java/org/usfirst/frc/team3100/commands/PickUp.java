@@ -7,6 +7,7 @@ public class PickUp extends Command {
     public PickUp() {
         super("PickUp");
         requires(Robot.pickUp);
+        setTimeout(2);
     }
 
     public void initialize() {
@@ -18,7 +19,7 @@ public class PickUp extends Command {
     }
 
     public boolean isFinished() {
-        return Robot.oi.pickingUp();
+        return isTimedOut();
     }
 
     public void end() {
