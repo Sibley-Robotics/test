@@ -33,7 +33,7 @@ public class Aim extends Command {
     }
 
     public boolean isFinished() {
-        return true;
+        return false;
     }
 
     public void end() {
