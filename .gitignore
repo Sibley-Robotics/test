@@ -1,6 +1,0 @@
-# intellij files
-.idea/workspace.xml
-
-# build files
-.gradle/
-build/
